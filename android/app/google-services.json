@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "204795434527",
+    "project_id": "authentication-f2bf8",
+    "storage_bucket": "authentication-f2bf8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204795434527:android:79da2ec651c10d99f4a72a",
+        "android_client_info": {
+          "package_name": "com.example.auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZrDNDHYKm6ks2uiRhjqczf-yrMKZFL18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
