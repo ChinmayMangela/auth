@@ -1,5 +1,5 @@
-import 'package:auth/presentation/screens/home_screen.dart';
 import 'package:auth/presentation/screens/login_or_signup.dart';
+import 'package:auth/presentation/screens/verify_email_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,7 @@ class AuthGate extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         } else if (snapshot.hasData) {
-          return const HomeScreen();
+          return const VerifyEmailScreen();
         } else {
           return const LoginOrSignup();
         }

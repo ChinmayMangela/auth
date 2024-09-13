@@ -44,7 +44,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       return;
     }
 
-    if (email.isEmpty && password.isEmpty && confirmPassword.isEmpty) {
+    if (email.isEmpty || password.isEmpty || confirmPassword.isEmpty) {
       Utils.showSnackBar('Please enter all the fields');
       return;
     }

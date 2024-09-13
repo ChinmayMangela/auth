@@ -31,8 +31,6 @@ class _LogInScreenState extends State<LogInScreen> {
   }
 
   void _logIn() async {
-    Utils.showCircularProgressIndicator(context);
-
     final email = _emailController.text.trim();
     final password = _passwordController.text.trim();
 
@@ -40,6 +38,8 @@ class _LogInScreenState extends State<LogInScreen> {
       Utils.showSnackBar('Enter your credentials');
       return;
     }
+
+    Utils.showCircularProgressIndicator(context);
 
     await _auth.logInWithEmail(email, password);
     navigatorKey.currentState?.popUntil((route) => route.isFirst);

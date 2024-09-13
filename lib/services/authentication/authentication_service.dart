@@ -27,6 +27,7 @@ class AuthenticationService {
   }
 
   Future<void> sendEmailVerification() async {
+    Utils.showSnackBar('Email has been sent');
     try {
       final user = FirebaseAuth.instance.currentUser!;
       await user.sendEmailVerification();
@@ -37,5 +38,14 @@ class AuthenticationService {
 
   Future signOut() async {
     await _auth.signOut();
+  }
+
+  Future<void> sendVerificationEmail() async {
+    try{
+      final user = _auth.currentUser;
+      await user!.sendEmailVerification();
+    } catch(e) {
+      Utils.showSnackBar(e.toString());
+    }
   }
 }
